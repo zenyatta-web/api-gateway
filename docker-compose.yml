@@ -11,16 +11,13 @@ services:
     environment:
       - KONG_DATABASE=off
       - KONG_DECLARATIVE_CONFIG=/usr/local/kong/declarative/kong.yml
-    volumes:
-      - ./kong.yml:/usr/local/kong/declarative/kong.yml
     depends_on:
-      - apirest
+      - go-api
 
-  apirest:
+  go-api:
     build:
       context: ./apirest
-      dockerfile: Dockerfile
     ports:
-      - "8082:8082"
+      - "8080:8080"
 
   

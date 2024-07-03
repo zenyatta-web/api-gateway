@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	port := ":8082"
+	port := ":8080"
 	fmt.Println("Hello word from Rocky API REST. Listen in" + port + " port")
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
