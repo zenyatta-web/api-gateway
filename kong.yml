@@ -1,8 +1,13 @@
-_format_version: "2.1"
-services:
-  - name: go-api
-    url: http://go-api:8080
-    routes:
-      - name: go-api-route
-        paths:
-          - /go-api
+_format_version: "3.0"
+ _transform: true
+
+ services:
+ - host: httpbin.org
+   name: example_service
+   port: 80
+   protocol: http
+   routes:
+   - name: example_route
+     paths:
+     - /mock
+     strip_path: true
