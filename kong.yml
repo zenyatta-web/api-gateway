@@ -1,13 +1,22 @@
 _format_version: "3.0"
- _transform: true
+_transform: true
 
- services:
- - host: httpbin.org
-   name: example_service
-   port: 80
-   protocol: http
-   routes:
-   - name: example_route
-     paths:
-     - /mock
-     strip_path: true
+services:
+- host: httpbin.org
+  name: example_service
+  port: 80
+  protocol: http
+  routes:
+  - name: example_route
+    paths:
+    - /mock
+    strip_path: true
+- host: youtube.com
+  name: yutu
+  port: 80
+  protocol: http
+  routes: 
+  - name: yutu_route
+    paths:
+    - /yutu
+    strip_path: true
